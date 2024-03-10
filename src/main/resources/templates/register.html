@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+th:replace="base::Layout(~{::body})" >
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body>
+
+
+<div style=" padding: 50px; width: 700px; margin: auto;" >
+	<h1 style="text-align: center;">User Register page </h1>
+	
+	<form action="userRegister" method="post">
+		<th:block th:if="${session.msg}" ><h4 style="color: green; text-align: center;"> [[${session.msg}]] </h4>
+		<th:block th:text="${@employeeServiceImpl.removeSession()}"></th:block>
+		</th:block>
+		<th:block th:if="${session.ermsg}"> 
+			<h1 style="text-align: center; color: red;">[[${session.ermsg}]]</h1>
+		
+		</th:block>
+   <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Full name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="fullName">
+      </div>		
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+      </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" name="password" >
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+	
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+th:replace="base::Layout(~{::div})" >
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ 
+</head>
+<body>
+
+<div style="width: 400px; margin: auto;">
+	<h1>Employee Profile Page</h1>
+	<h3>Id : [[${var.id}]]</h3>
+	<h3>Name :[[${var.fullName}]]</h3>
+	<h3>Role :[[${var.role}]]</h3>
+	<h3> Email :[[${var.email}]]</h3>
+	<a href="/logout"><button class="btn btn-primary">Logout Profile</button></a>
+	
+</div>
+
+</body>
+</html>
